@@ -36,6 +36,8 @@ for mask_filename in os.listdir(input_dir):
 
     # Process each unique color in the input mask image
     for color in unique_colors:
+
+        # Ignores Background
         if np.array_equal(color, np.zeros(3, dtype='int8')):
             continue
 
